@@ -220,6 +220,9 @@ class GetBackendTest(jtu.JaxTestCase):
     def local_devices(self):
       return []
 
+    def _get_all_devices(self):
+      return self.local_devices()
+
   def _register_factory(self, platform: str, priority, device_count=1,
                         assert_used_at_most_once=False, experimental=False):
     if assert_used_at_most_once:
